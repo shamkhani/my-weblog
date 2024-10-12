@@ -1,19 +1,19 @@
 import React, { ReactNode } from 'react';
-import { Container, Navbar, Nav } from 'react-bootstrap';
 import ThemeToggle from './ThemeToggle';
 
 const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
-      <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="/">My Weblog</Navbar.Brand>
-        <Nav className="ml-auto">
-          <Nav.Item>
-            <ThemeToggle />
-          </Nav.Item>
-        </Nav>
-      </Navbar>
-      <Container>{children}</Container>
+  <header className="mb-14 flex flex-row place-content-between">
+        <a className="__className_b47211 inline-block text-2xl font-black  scale-100 active:scale-100"
+          href="/">
+            <span className='headerTitle' >
+              overreacted</span>
+              </a>
+              <span className="relative top-[4px] italic"> 
+              <ThemeToggle /></span></header>
+   
+      <main>{children}</main>
     </>
   );
 };
