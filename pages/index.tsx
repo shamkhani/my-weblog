@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../redux/postsSlice';
 import { RootState, AppDispatch } from '../redux/store';  
-import { Container, Row, Col, Card, Spinner } from 'react-bootstrap';
 import PostList from '../components/PostList';
 
 export default function Home() {
@@ -16,8 +15,8 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <Container>
+    <div>
       <PostList posts={posts}  error={error} loading={loading}/>
-    </Container>
+    </div>
   );
 }

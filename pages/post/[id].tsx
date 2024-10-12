@@ -1,10 +1,8 @@
 import { useRouter } from 'next/router';
-import { Container, Spinner } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPostById } from '../../redux/postsSlice';
 import { RootState, AppDispatch } from '../../redux/store';  
-import PostItem from '../../components/PostItem';
 
 const PostPage = () => {
   const router = useRouter();
@@ -27,7 +25,7 @@ const PostPage = () => {
  
   return (
     <>
-    <Container>
+    <div>
        {loading ? (
         <p className=' bg-[--bg]'>Loading</p>
       ) : error ? (
@@ -43,7 +41,7 @@ const PostPage = () => {
       </article>
       </a>
        )}
-    </Container>
+    </div>
     </>
   );
 };
